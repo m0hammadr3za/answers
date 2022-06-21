@@ -1,7 +1,5 @@
 ## Difference between Next.js ISR, SSR, CSR?
 
----
-
 With client side components, we fetch the data directly inside of our components, and the data will be fetched when the component is mounted. In next.js this is useful when we are making a component, like a dashboard, that doesn’t need to be pre rendered and doesn’t require SEO indexing or when our data is frequently updating.
 
 For pre-rendering our page we have two options: server-side rendering and static-site generation.
