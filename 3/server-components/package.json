@@ -1,0 +1,21 @@
+{
+  "name": "server-components",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "next": "^12.2.0",
+    "react": "^18.0.0-beta-24dd07bd2-20211208",
+    "react-dom": "^18.0.0-beta-24dd07bd2-20211208",
+    "react-fetch": "^0.0.0-experimental-d7dce572c"
+  },
+  "devDependencies": {
+    "eslint": "8.18.0",
+    "eslint-config-next": "12.2.0"
+  }
+}
