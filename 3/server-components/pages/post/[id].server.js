@@ -1,12 +1,8 @@
-import { useRouter } from "next/router";
 import { fetch } from "react-fetch";
 import Link from "next/link";
 
-export default function SinglePost() {
-  const router = useRouter();
-  const { id } = router.query;
-
-  const post = fetch(`https://jsonplaceholder.typicode.com/posts/${id}`);
+export default function Post({ id }) {
+  const post = fetch("https://jsonplaceholder.typicode.com/posts/" + id).json();
 
   return (
     <div>
@@ -20,4 +16,13 @@ export default function SinglePost() {
       </Link>
     </div>
   );
+}
+
+export async function getServerSideProps(context) {
+  const { id } = context.query;
+  return {
+    props: {
+      id,
+    },
+  };
 }

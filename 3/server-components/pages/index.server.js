@@ -1,7 +1,7 @@
 import { fetch } from "react-fetch";
-import PostCard from "../components/PostCard.server";
+import PostCard from "../components/PostCard";
 
-export default function Posts() {
+export default function Home() {
   const posts = fetch("https://jsonplaceholder.typicode.com/posts").json();
 
   return (
@@ -12,9 +12,8 @@ export default function Posts() {
       </div>
 
       <div>
-        {posts?.map((post) => (
-          <PostCard key={post.id} data={post} />
-        ))}
+        {posts.length > 0 &&
+          posts.map((post) => <PostCard key={post.id} data={post} />)}
       </div>
     </div>
   );
