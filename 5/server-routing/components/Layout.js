@@ -1,18 +1,16 @@
-import Link from "next/link";
-
 export default function Layout({ children }) {
   return (
     <div>
       <div>
         <ul>
           <li>
-            <Link href="/">Home</Link>
+            <a href="/">Home</a>
           </li>
           <li>
-            <Link href="/about">About</Link>
+            <a href="/about">About</a>
           </li>
           <li>
-            <Link href="/team">Team</Link>
+            <a href="/team">Team</a>
           </li>
         </ul>
       </div>
